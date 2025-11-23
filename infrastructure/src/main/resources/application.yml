@@ -1,0 +1,43 @@
+spring:
+  messages:
+    basename: messages, i18n.list
+    fallback-to-system-locale: false
+  jackson:
+    serialization:
+      indent_output: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: true
+    show-sql: true
+  datasource:
+    hikari:
+      auto-commit: false
+      connection-timeout: 30000
+      initialization-fail-timeout: 60000
+      max-lifetime: 600000
+      maximum-pool-size: 20
+      minimum-idle: 10
+      pool-name: push-na-master
+    url: jdbc:mysql://localhost:3308/oms?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Sao_Paulo&useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false&maxReconnects=3
+    username: admin
+    password: nimda
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: order-consumer-os
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: admin
+    password: nimda
+ksqldb:
+  server: http://localhost:8088
+server:
+  port: 8085
+  servlet:
+    context-path: /api

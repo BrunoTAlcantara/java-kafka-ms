@@ -1,0 +1,16 @@
+version: '3.1'
+services:
+  oms:
+    image: mysql:8.3
+    command: --default-authentication-plugin=mysql_native_password
+    container_name: "oms"
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_DATABASE: 'oms'
+      MYSQL_USER: 'admin'
+      MYSQL_PASSWORD: 'nimda'
+    volumes:
+      - ./dbs/oms:/var/lib/mysql
+    ports:
+      - "3308:3306"

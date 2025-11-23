@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.pushnamaster</groupId>
+	<artifactId>pushnamaster</artifactId>
+	<packaging>pom</packaging>
+	<version>1.0</version>
+	<description>Curso KSQLDB Push Na master Com Domain Driven Design</description>
+
+
+	<properties>
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<spring.boot.version>2.7.5</spring.boot.version>
+		<spring.doc.version>1.6.12</spring.doc.version>
+		<jackson.version>2.13.4</jackson.version>
+		<testcontainers.version>1.17.5</testcontainers.version>
+		<mysql.connector.version>8.2.0</mysql.connector.version>
+		<ksqldb.version>0.29.0</ksqldb.version>
+		<java.faker.version>1.5.0</java.faker.version>
+	</properties>
+
+
+	<modules>
+		<module>infrastructure</module>
+		<module>application</module>
+		<module>domain</module>
+	</modules>
+
+</project>
